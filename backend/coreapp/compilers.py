@@ -630,7 +630,7 @@ SATURN_SHC_CC = (
     'cat "$INPUT" | unix2dos > dos_src.c && '
     "cp -r ${COMPILER_DIR}/bin/* . && "
     "(SHC_LIB=. SHC_TMP=. ${WIBO} ${COMPILER_DIR}/bin/shc.exe dos_src.c -comment=nonest -cpu=sh2 -endian=big -sjis -string=const ${COMPILER_FLAGS} -object=dos_src.obj) && "
-    "python3 ${COMPILER_DIR}/rof2elf.py dos_src.obj ${OUTPUT} --isa=sh2"
+    "python3 ${COMPILER_DIR}/rof2elf.py dos_src.obj ${OUTPUT} --isa=sh2 --padding 0xff"
 )
 
 SHC_V50R32_SH2 = SHCSaturnCompiler(
