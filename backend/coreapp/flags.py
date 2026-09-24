@@ -239,9 +239,6 @@ SHC_FLAGS = FlagClass(
     parent=COMMON_SHC_OLD_FLAGS,
 )
 
-# SH-2 has no FPU, so -fpu and -round have no effect there (shc-v5.0r32 emits
-# identical code with or without them). -aggressive=2 still matters: it turns
-# float/double division by a constant into a __muls/__muld by the reciprocal.
 SHC_SH2_FLAGS = FlagClass(
     name="shc-sh2",
     flags=[

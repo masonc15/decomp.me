@@ -626,7 +626,6 @@ SHC_V51R08 = SHCCompiler(id="shc-v5.1r08", platform=DREAMCAST, cc=DREAMCAST_CC)
 SHC_V51R11 = SHCCompiler(id="shc-v5.1r11", platform=DREAMCAST, cc=DREAMCAST_CC)
 SHC_V51R13 = SHCCompiler(id="shc-v5.1r13", platform=DREAMCAST, cc=DREAMCAST_CC)
 
-# SH-2 big-endian; -division/-macsave are left to the scratch flags
 SATURN_SHC_CC = (
     'cat "$INPUT" | unix2dos > dos_src.c && '
     "cp -r ${COMPILER_DIR}/bin/* . && "
